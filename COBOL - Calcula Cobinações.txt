@@ -1,0 +1,59 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. Combinacoes.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 Numero-Total PIC 9(2) VALUE 9.
+01 Resultado PIC 9(10) VALUE ZERO.
+01 Contador PIC 9(2).
+01 Indice PIC 9(2).
+01 i PIC 9(2).
+01 j PIC 9(2).
+01 k PIC 9(2).
+01 l PIC 9(2).
+01 m PIC 9(2).
+01 n PIC 9(2).
+01 o PIC 9(2).
+01 p PIC 9(2).
+01 q PIC 9(2).
+01 r PIC 9(2).
+01 s PIC 9(2).
+01 t PIC 9(2).
+01 u PIC 9(2).
+01 v PIC 9(2).
+01 w PIC 9(2).
+01 x PIC 9(2).
+01 y PIC 9(2).
+01 z PIC 9(2).
+01 Resultado-String PIC X(20).
+
+PROCEDURE DIVISION.
+Begin.
+    PERFORM Vary-Numero FROM 1 BY 1 UNTIL Numero-Total
+    DISPLAY Resultado-String
+    STOP RUN.
+
+Vary-Numero SECTION.
+    PERFORM Vary-Indice FROM 1 BY 1 UNTIL Numero-Total
+    END-PERFORM.
+
+Vary-Indice SECTION.
+    MOVE 1 TO Contador
+    PERFORM UNTIL Contador > 1
+        ADD 1 TO Contador
+        PERFORM Display-Combinacao
+    END-PERFORM.
+
+Display-Combinacao SECTION.
+    MOVE ' ' TO Resultado-String
+    MOVE i TO Resultado
+    MOVE j TO Resultado
+    MOVE k TO Resultado
+    MOVE l TO Resultado
+    MOVE m TO Resultado
+    MOVE n TO Resultado
+    MOVE o TO Resultado
+    MOVE p TO Resultado
+    MOVE q TO Resultado
+    DISPLAY Resultado
+    MOVE Resultado TO Resultado-String
+    DISPLAY Resultado-String.
